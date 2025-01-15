@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <form action="" class="bg-white p-8 rounded-lg shadow-lg w-96 space-y-4">
+        <h1 class="text-3xl font-bold text-center text-blue-600">Temperature Conversion</h1>
+
+        <!-- Input Field -->
+        <input 
+            type="number" id="textBox"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            value="0">
+
+        <!-- Radio Buttons -->
+        <div class="space-y-2">
+            <div>
+                <input type="radio" id="toFahrenheit" class="toFahrenheit accent-blue-500" name="unit">
+                <label for="toFahrenheit" class="text-lg text-gray-700 ml-2">Celsius to Fahrenheit</label>
+            </div>
+            <div>
+                <input type="radio" id="toCelsius" class="toCelsius accent-blue-500" name="unit">
+                <label for="toCelsius" class="text-lg text-gray-700 ml-2">Fahrenheit to Celsius</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+            type="button" 
+            onclick="convert()" 
+            class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+            Convert
+        </button>
+
+        <!-- Result Section -->
+        <p id="result" class="text-center text-xl font-semibold text-gray-800">Select a unit</p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
